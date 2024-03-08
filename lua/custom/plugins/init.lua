@@ -47,4 +47,19 @@ return {
     -- git diff
     'sindrets/diffview.nvim',
   },
+  {
+    -- auto brackets
+    'jiangmiao/auto-pairs',
+  },
+  {
+    'doums/darcula',
+    lazy = false,
+    priority = 1000,
+    config = function()
+      vim.cmd.colorscheme 'darcula'
+    end,
+  },
+  {
+    'rktjmp/lush.nvim',
+  },
 }
