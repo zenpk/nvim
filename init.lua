@@ -159,7 +159,7 @@ vim.opt.shiftwidth = 4
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
-require 'custom.keymap'
+require 'custom.keymaps'
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -855,6 +855,9 @@ require('lazy').setup({
   },
 })
 -- end of lazy
+
+-- my
+require('custom.commands')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
