@@ -4,6 +4,7 @@
 -- See the kickstart.nvim README for more information
 return {
   {
+    -- file tree
     'nvim-neo-tree/neo-tree.nvim',
     branch = 'v3.x',
     dependencies = {
@@ -21,7 +22,7 @@ return {
             hide_gitignored = true,
             hide_hidden = true, -- only works on Windows for hidden files/directories
             hide_by_name = {
-              "node_modules"
+              'node_modules',
             },
             hide_by_pattern = { -- uses glob style patterns
               --"*.meta",
@@ -41,5 +42,9 @@ return {
         },
       }
     end,
+  },
+  {
+    -- git diff
+    'sindrets/diffview.nvim',
   },
 }

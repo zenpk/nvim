@@ -626,14 +626,13 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { 'isort', 'black' },
-        --
         -- You can use a sub-list to tell conform to run *until* a formatter
         -- is found.
         go = { { 'goimport', 'gofmt' } },
-        typescript = { { 'prettierd', 'prettier' } },
-        javascript = { { 'prettierd', 'prettier' } },
         html = { { 'prettierd', 'prettier' } },
+        javascript = { { 'prettierd', 'prettier' } },
+        typescript = { { 'prettierd', 'prettier' } },
+        python = { 'isort', 'black' },
       },
     },
   },
@@ -697,6 +696,7 @@ require('lazy').setup({
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
           -- ['<C-y>'] = cmp.mapping.confirm { select = true },
+          ['<Tab>'] = cmp.mapping.confirm { select = true },
 
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display
@@ -857,7 +857,7 @@ require('lazy').setup({
 -- end of lazy
 
 -- my
-require('custom.commands')
+require 'custom.commands'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
