@@ -696,8 +696,7 @@ require('lazy').setup({
           -- Accept ([y]es) the completion.
           --  This will auto-import if your LSP supports it.
           --  This will expand snippets if the LSP sent a snippet.
-          -- ['<C-y>'] = cmp.mapping.confirm { select = true },
-          ['<Tab>'] = cmp.mapping.confirm { select = true },
+          ['<C-y>'] = cmp.mapping.confirm { select = true },
 
           -- Manually trigger a completion from nvim-cmp.
           --  Generally you don't need this, because nvim-cmp will display
@@ -858,6 +857,7 @@ require('lazy').setup({
 -- end of lazy
 
 -- my
+require 'kickstart.plugins.indent_line'
 require 'custom.commands'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
