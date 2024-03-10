@@ -113,7 +113,9 @@ return {
       vim.cmd.colorscheme 'jeteyes'
     end,
   },
-  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
+  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {
+    scope = { enabled = false },
+  } },
   {
     'rktjmp/lush.nvim',
   },
