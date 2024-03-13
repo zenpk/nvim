@@ -11,25 +11,25 @@ vim.api.nvim_create_autocmd({ 'BufLeave', 'FocusLost' }, {
   end,
 })
 
--- automatically focus on the right side when boot up (useful because the left side is Neotree)
-vim.api.nvim_create_autocmd('VimEnter', {
-  callback = function()
-    -- Count the number of windows in the current tab.
-    local windows = vim.api.nvim_tabpage_list_wins(0)
-    if #windows == 2 then
-      -- Store the current window ID.
-      local current_win = vim.api.nvim_get_current_win()
-      -- Get window positions. In a vertical split, the window with the smaller 'col' value is on the left.
-      local win1_col = vim.api.nvim_win_get_position(windows[1])[2]
-      local win2_col = vim.api.nvim_win_get_position(windows[2])[2]
-      -- Check if windows are vertically split by comparing their column positions.
-      -- A difference in 'col' values indicates a vertical split.
-      if win1_col ~= win2_col then
-        if current_win == windows[1] then
-          -- Focus right window if currently focused on the left window.
-          vim.api.nvim_set_current_win(windows[2])
-        end
-      end
-    end
-  end,
-})
+-- -- automatically focus on the right side when boot up (useful because the left side is Neotree)
+-- vim.api.nvim_create_autocmd('VimEnter', {
+--   callback = function()
+--     -- Count the number of windows in the current tab.
+--     local windows = vim.api.nvim_tabpage_list_wins(0)
+--     if #windows == 2 then
+--       -- Store the current window ID.
+--       local current_win = vim.api.nvim_get_current_win()
+--       -- Get window positions. In a vertical split, the window with the smaller 'col' value is on the left.
+--       local win1_col = vim.api.nvim_win_get_position(windows[1])[2]
+--       local win2_col = vim.api.nvim_win_get_position(windows[2])[2]
+--       -- Check if windows are vertically split by comparing their column positions.
+--       -- A difference in 'col' values indicates a vertical split.
+--       if win1_col ~= win2_col then
+--         if current_win == windows[1] then
+--           -- Focus right window if currently focused on the left window.
+--           vim.api.nvim_set_current_win(windows[2])
+--         end
+--       end
+--     end
+--   end,
+-- })
