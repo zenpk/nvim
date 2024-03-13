@@ -14,8 +14,8 @@ vim.keymap.set('n', '<leader>D', 'D', { noremap = true, silent = true })
 vim.keymap.set('n', 'U', '<C-r>', { desc = 'redo' })
 vim.keymap.set('n', 'Q', '<nop>')
 vim.keymap.set('n', '<leader>v', '<C-v>', { desc = 'visual block' })
-vim.keymap.set('n', '<leader>sw', ':w !sudo tee > /dev/null %<cr>', { desc = '[S]udo [W]rite' })
-vim.keymap.set('n', '<leader>sp', ':set paste<cr>', { desc = '[S]et [P]aste' })
+vim.keymap.set('n', '<leader>sudow', ':w !sudo tee > /dev/null %<cr>', { desc = '[S]udo [W]rite' })
+vim.keymap.set('n', '<leader>paste', ':set paste<cr>', { desc = '[S]et [P]aste' })
 vim.keymap.set('n', '<leader>copy', ':set nonumber norelativenumber signcolumn=no wrap<cr>')
 
 -- format code
