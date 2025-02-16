@@ -1,25 +1,3 @@
--- sane clipboard
-vim.keymap.set('', 'c', '"1c', { desc = 'throw into the void', noremap = true, silent = true })
-vim.keymap.set('', 'C', '"1C', { noremap = true, silent = true })
-vim.keymap.set('', 's', '"1s', { noremap = true, silent = true })
-vim.keymap.set('', 'S', '"1S', { noremap = true, silent = true })
-vim.keymap.set('', 'x', '"1x', { noremap = true, silent = true })
-vim.keymap.set('', 'X', 'x', { desc = 'use X to cut', noremap = true, silent = true })
-vim.keymap.set('', 'd', '"1d', { noremap = true, silent = true })
-vim.keymap.set('', 'dd', '"1dd', { noremap = true, silent = true })
-vim.keymap.set('', 'D', '"1D', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>d', 'dd', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>D', 'D', { noremap = true, silent = true })
-
-vim.keymap.set('n', 'U', '<C-r>', { desc = 'redo' })
-vim.keymap.set('n', 'Q', '<nop>')
-vim.keymap.set('n', '<leader>v', '<C-v>', { desc = 'visual block' })
-vim.keymap.set('n', '<leader>w', ':w<CR>')
-vim.keymap.set('n', '<leader>sudow', ':w !sudo tee > /dev/null %<CR>')
-vim.keymap.set('n', '<leader>paste', ':set paste<CR>')
-vim.keymap.set('n', '<leader>copy', ':set nonumber norelativenumber signcolumn=no wrap<CR>')
-vim.keymap.set('n', '<CR>', 'ciw', { desc = 'fast insert' })
-
 -- format code
 vim.keymap.set('', '<leader>f', function()
   require('conform').format { async = true, lsp_fallback = true }
