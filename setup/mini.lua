@@ -6,6 +6,7 @@ now(function() require('plugins.vim') end)
 now(function() require('plugins.flash') end)
 
 -- Safely execute later
+-- later(function() require('mini.jump').setup() end)
 -- later(function() require('mini.ai').setup() end)
 -- later(function() require('mini.comment').setup() end)
 -- later(function() require('mini.pick').setup() end)

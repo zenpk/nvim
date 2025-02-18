@@ -23,6 +23,7 @@ end
 require('mini.deps').setup({ path = { package = path_package } })
 require('setup.mini')
 
+require('custom.commands')
 if vim.g.vscode then
   require('custom.vscode')
 end
